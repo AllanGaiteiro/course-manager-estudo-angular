@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "name": "Angular: Forms",
+        "imageUrl": "/assets/images/forms.png",
+        "price": 90.99,
+        "code": "ang-8796",
+        "duration": 128,
+        "rating": 4,
+        "releaseDate": "04/12/2012, 00:00:00"            },
+    {
+        "id": 2,
+        "name": "Angular: HTTP",
+        "imageUrl": "/assets/images/http.png",
+        "price": 40.50,
+        "code": "ang-8001",
+        "duration": 90,
+        "rating": 3,
+        "releaseDate": "04/04/2018, 00:00:00"
+    }
+]

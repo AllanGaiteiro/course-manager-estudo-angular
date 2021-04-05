@@ -1,0 +1,42 @@
+<h1>Courses List</h1>
+
+<div class="form-group row" *ngIf="courses" >
+<label class="col-sm-2 col-form-label">Filter By:</label>
+<div class="col-sm-10">
+    <input type="text" [(ngModel)]="filter" class="form-control">
+</div>
+</div> 
+
+<table class="table table-striped" *ngIf="filteredCourses.length !== 0">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Data Lançamento</th>
+            <th>Rating</th>
+            <th>Option</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let course of filteredCourses">
+            <td>
+                <img *ngIf="course.imageUrl" [src]="course.imageUrl" alt="" width="36px" height="36px">
+            </td>
+            <td>{{course.name || '-'}}</td>
+            <td>{{course.price | money: 'R$'}}</td>
+            <td>{{course.releaseDate | date: 'dd/MM/yyyy'}}</td>
+            <td>
+                <app-star [rating]="course.rating"></app-star>
+            </td>
+            <td>
+                <a [routerLink]="['/courses/info',course.id]" class="btn btn-primary mr-2">Edit</a>
+                <button class="btn btn-danger " (click)="deleteCourse(course.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div *ngIf="filteredCourses.length === 0">
+    <h3 style="text-align: center;">Não foi encontrado nenhum curso.</h3>
+</div>
