@@ -1,8 +1,10 @@
 # intro-angular-course-management
  
-Eecultar server
-cd intro-angular-course-manager/src/server/ 
-npm start
+Execultar server:
 
-depois execultar npm start na pasta raiz
+cd intro-angular-course-manager/src/server/ 
+
+Npm start
+
+Depois execultar npm start na pasta raiz
 
