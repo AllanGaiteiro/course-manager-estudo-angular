@@ -2,7 +2,7 @@
  
 Execultar server:
 
-cd intro-angular-course-manager/src/server/ 
+entrar na pasta intro-angular-course-manager/src/server/ 
 
 Npm start
 
